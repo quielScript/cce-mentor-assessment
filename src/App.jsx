@@ -24,7 +24,8 @@ function App() {
 			completed: false,
 		};
 
-		setTasks((prevTasks) => [...prevTasks, task]);
+		// Fix
+		setTasks((prevTasks) => prevTasks.concat(task));
 		setTaskName("");
 	};
 
