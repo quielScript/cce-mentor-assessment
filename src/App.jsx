@@ -32,7 +32,7 @@ function App() {
 	const markTaskAsComplete = (taskId) => {
 		setTasks((prevTasks) =>
 			prevTasks.map((task) =>
-				task.taskId === taskId ? { ...task, completed: true } : task
+				task.taskId === taskId ? { ...task, completed: !task.completed } : task
 			)
 		);
 	};
