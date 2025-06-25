@@ -3,8 +3,8 @@ import Tasks from "./components/Tasks";
 
 function App() {
 	const [taskName, setTaskName] = useState("");
-	const [tasks, setTasks] = useState(() =>
-		JSON.parse(localStorage.getItem("tasks"))
+	const [tasks, setTasks] = useState(
+		() => JSON.parse(localStorage.getItem("tasks")) || []
 	);
 
 	// Store tasks in local storage
