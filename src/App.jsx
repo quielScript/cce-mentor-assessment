@@ -13,6 +13,11 @@ function App() {
 	}, [tasks]);
 
 	const addTask = () => {
+		if (!taskName.trim()) {
+			alert("Please enter a task!");
+			return;
+		}
+
 		const task = {
 			taskId: crypto.randomUUID(),
 			taskName: taskName.trim(),
